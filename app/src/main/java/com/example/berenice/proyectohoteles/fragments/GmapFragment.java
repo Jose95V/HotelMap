@@ -41,9 +41,9 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        LatLng marker = new LatLng(-33.867, 151.206);
+        LatLng marker = new LatLng( 14.4490149 , -87.6482474);
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 13));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
 
         googleMap.addMarker(new MarkerOptions().title("Hello Google Maps!").position(marker));
     }
