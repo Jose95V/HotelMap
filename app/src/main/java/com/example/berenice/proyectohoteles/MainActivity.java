@@ -1,5 +1,6 @@
 package com.example.berenice.proyectohoteles;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -53,11 +56,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void OnStarMaps(View v){
-        Intent intent = new Intent(this, MapsActivity.class);
-        startActivity(intent);
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
