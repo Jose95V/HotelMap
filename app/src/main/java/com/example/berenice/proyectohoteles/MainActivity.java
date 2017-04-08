@@ -106,7 +106,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             fm.beginTransaction().replace(R.id.content_frame, new ImportFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            String url="http://proyectopelicula.esy.es/hotel.php";
+            getHoteles(url);
+            setTitle("Hotel");
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
