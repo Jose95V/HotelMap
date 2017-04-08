@@ -43,8 +43,8 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
 
         LatLng marker = new LatLng( 14.4490149 , -87.6482474);
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 18));
 
-        googleMap.addMarker(new MarkerOptions().title("Hello Google Maps!").position(marker));
+        googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
     }
 }
