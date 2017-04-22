@@ -47,4 +47,5 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
 
         googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
     }
+
 }
