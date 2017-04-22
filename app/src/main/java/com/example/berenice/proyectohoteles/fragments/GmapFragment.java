@@ -14,6 +14,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -22,6 +23,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 
 public class GmapFragment extends Fragment implements OnMapReadyCallback {
+
+    GoogleMap map;
 
     @Nullable
     @Override
@@ -41,11 +44,30 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        LatLng marker = new LatLng( 14.4490149 , -87.6482474);
+
+        map = googleMap;
+
+        map.getUiSettings().setZoomControlsEnabled(true);
+
+        LatLng marker = new LatLng( 14.4504684 , -87.62989800000003);
+        LatLng hotel1 = new LatLng( 14.44363634700978 , -87.63761222362518);
+        LatLng hotel2 = new LatLng( 14.445522075895944 , -87.63803601264954);
+        LatLng hotel3 = new LatLng( 14.446667531505083 , -87.63346284627914);
+        LatLng hotel4 = new LatLng( 14.456540023343491 , -87.63174891471863);
+        LatLng hotel5 = new LatLng( 14.450176588950702 , -87.64241874217987);
+        LatLng hotel6 = new LatLng( 14.454171288641326 , -87.6426762342453);
+
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 18));
 
+
         googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
+        googleMap.addMarker(new MarkerOptions().title("Santa Maria de Comayagua").position(hotel1).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Plaza Futura").position(hotel2).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Comayagua Colonial").position(hotel3).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Suarez").position(hotel4).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Posada del Valle").position(hotel5).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Santa Teresa").position(hotel6).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
     }
 
 }
