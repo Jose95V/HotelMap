@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detalle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.berenice.proyectohoteles.MainActivity">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imagenDetalle"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:text="Hotel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/_nombre"
+        android:layout_below="@+id/imagenDetalle"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:text="Llegada:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_nombre"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/_llegada" />
+
+    <TextView
+        android:text="Personas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/_personas"
+        android:layout_below="@+id/_salida"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Salida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/_salida"
+        android:layout_below="@+id/_llegada"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/_personas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/_salida"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_below="@+id/_nombre"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3" />
+
+    <Button
+        android:id="@+id/reserva"
+        style="@style/homeButton"
+        android:onClick="onStartReserva"
+        android:text="Next"
+        android:textColor="#ffffff"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="21dp" />
+
+
+</RelativeLayout>
