@@ -16,6 +16,7 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="match_parent">
 
         <ListView
@@ -25,5 +26,11 @@
             android:layout_gravity="center" />
 
     </FrameLayout>
+=======
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+>>>>>>> origin/master
 
 </RelativeLayout>
