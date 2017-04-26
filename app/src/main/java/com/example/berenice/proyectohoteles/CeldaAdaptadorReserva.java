@@ -15,14 +15,14 @@ import org.json.JSONObject;
 import java.util.List;
 
 /**
- * Created by Berenice on 08/04/2017.
+ * Created by Berenice on 25/04/2017.
  */
 
-public class CeldaAdaptador extends ArrayAdapter<JSONObject> {
-    public CeldaAdaptador (Context context, int textViewResourseId){
+public class CeldaAdaptadorReserva extends ArrayAdapter<JSONObject>{
+    public CeldaAdaptadorReserva  (Context context, int textViewResourseId){
         super(context, textViewResourseId);
     }
-    public CeldaAdaptador(Context context, int resourse, List<JSONObject> items){
+    public CeldaAdaptadorReserva (Context context, int resourse, List<JSONObject> items){
         super(context,resourse,items);
     }
     @Override
@@ -33,23 +33,23 @@ public class CeldaAdaptador extends ArrayAdapter<JSONObject> {
         if (celda==null)
         {
             LayoutInflater layoutInflater = LayoutInflater.from(getContext());
-            celda= layoutInflater.inflate(R.layout.celda_adaptador,null);
+            celda= layoutInflater.inflate(R.layout.celda_adaptadorinformacion,null);
         }
-        //Video video;
 
 
-       // TextView nombre=(TextView) celda.findViewById(R.id.nombre);
+
+       // TextView nombre=(TextView) celda.findViewById(R.id.precio);
       /*  TextView descripcion=(TextView) celda.findViewById(R.id.descripcion);
         TextView genero=(TextView) celda.findViewById(R.id.genero);
         TextView clasificacion=(TextView) celda.findViewById(R.id.clasificasion);
 */
-        NetworkImageView niv= (NetworkImageView)celda.findViewById(R.id.imagen);
+        NetworkImageView niv= (NetworkImageView)celda.findViewById(R.id.imagenInformacion);
 
         JSONObject elemento=this.getItem(position);
         try {
 
             String url=elemento.getString("imagen");
-          //  nombre.setText(elemento.getString("descripcion"));
+            //nombre.setText(elemento.getString("descripcion"));
            /* descripcion.setText(elemento.getString("descripcion"));
             genero.setText("Genero: "+elemento.getString("genero"));
             clasificacion.setText("Clasificación: "+elemento.getString("clasificacion"));
@@ -63,8 +63,8 @@ public class CeldaAdaptador extends ArrayAdapter<JSONObject> {
         celda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DetalleInformacion.class);
-                intent.putExtra("hotel", getItem(position).toString());
+                Intent intent = new Intent(getContext(), DetalleActivity.class);
+                intent.putExtra("imagen", getItem(position).toString());
                 getContext().startActivity(intent);
             }
         });

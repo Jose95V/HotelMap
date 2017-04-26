@@ -17,7 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.berenice.proyectohoteles.fragments.GmapFragment;
-import com.example.berenice.proyectohoteles.fragments.ImportFragment;
 import com.example.berenice.proyectohoteles.fragments.MainFragment;
 
 import org.json.JSONArray;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity
 
 
         mContext=this;
-        String url="http://proyectopelicula.esy.es/hotel.php";
+        String url="http://hotelmap.esy.es/hotel.php";
         getHoteles(url);
     }
 
@@ -78,6 +77,12 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+
+    private void detalle(){
+
+            setContentView(R.layout.detalle_activity);
+            }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -104,11 +109,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             fm.beginTransaction().replace(R.id.content_frame, new GmapFragment()).commit();
         } else if (id == R.id.nav_gallery) {
-            fm.beginTransaction().replace(R.id.content_frame, new ImportFragment()).commit();
-        } else if (id == R.id.nav_slideshow) {
-            String url="http://proyectopelicula.esy.es/hotel.php";
+            String url="http://hotelmap.esy.es//hotel.php";
             getHoteles(url);
             setTitle("Hotel");
+        } else if (id == R.id.nav_slideshow) {
+            String url="http://hotelmap.esy.es//Imagen.php";
+            getHabitaciones(url);
+            setTitle("Reservaciones");
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -142,6 +149,50 @@ public class MainActivity extends AppCompatActivity
 
                             }
                             CeldaAdaptador adapter=new CeldaAdaptador(context,0,dataSourse);
+                            ((ListView)findViewById(R.id.lista1)).setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+
+                        }
+
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //Nota: ponerse a llorar
+                        Logger.getAnonymousLogger().log(Level.SEVERE,"Error Fataliti");
+
+
+                    }
+                }
+        );
+        MySingleton.getInstance(mContext).addToRequestQueue(jor);
+    }
+
+    private void getHabitaciones(String url) {
+        final Context context=this;
+        JsonObjectRequest jor=new JsonObjectRequest(
+                url,
+                null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        Logger.getAnonymousLogger().log(Level.INFO,response.toString());
+                        try {
+                            kivaJason=response;
+                            JSONArray loans=response.getJSONArray("imagen");
+
+                            ArrayList<JSONObject> dataSourse=new ArrayList<JSONObject>();
+                            for(int i=0;i<loans.length();i++)
+                            {
+                                dataSourse.add(loans.getJSONObject(i));
+
+                            }
+                            CeldaAdaptadorReserva adapter=new CeldaAdaptadorReserva(context,0,dataSourse);
                             ((ListView)findViewById(R.id.lista1)).setAdapter(adapter);
                             adapter.notifyDataSetChanged();
                         } catch (JSONException e) {
