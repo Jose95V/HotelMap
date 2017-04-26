@@ -14,18 +14,17 @@
 
     <com.android.volley.toolbox.NetworkImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:id="@+id/imagenDetalle"
 
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-
     <TextView
-        android:text="Hotel"
+        android:text="Reservación"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:id="@+id/_nombre"
         android:layout_below="@+id/imagenDetalle"
         android:textSize="20sp"
@@ -35,7 +34,7 @@
         />
 
     <TextView
-        android:text="Llegada:"
+        android:text="Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/_nombre"
@@ -44,23 +43,11 @@
         android:id="@+id/_llegada" />
 
     <TextView
-        android:text="Personas"
+        android:text="Apellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:id="@+id/_personas"
-        android:layout_below="@+id/_salida"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp"
-        android:textStyle="normal|bold" />
-
-    <TextView
-        android:text="Salida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:id="@+id/_salida"
+        android:id="@+id/_apellido"
         android:layout_below="@+id/_llegada"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -70,52 +57,151 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/apqllidoR"
         android:textSize="25dp"
         android:background="#f5cbcb"
         android:textAlignment="center"
-        android:layout_alignTop="@+id/_personas"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_alignTop="@+id/_apellido"
+        android:layout_alignLeft="@+id/correoR"
+        android:layout_alignStart="@+id/correoR" />
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:textSize="25dp"
-        android:background="#f5cbcb"
-        android:textAlignment="center"
-        android:layout_alignTop="@+id/_salida"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:textSize="25dp"
+        android:id="@+id/nombreR"
+        android:textSize="20dp"
         android:background="#f5cbcb"
         android:textAlignment="center"
         android:layout_below="@+id/_nombre"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_alignLeft="@+id/apqllidoR"
+        android:layout_alignStart="@+id/apqllidoR" />
+
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/llegadaR"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/personasR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/_correo"
+        android:layout_marginTop="18dp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/apqllidoR"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Fecha Llegada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/textView3"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/llegadaR"
+        android:layout_alignBottom="@+id/llegadaR"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Fecha Salida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/textView5"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/salidaR"
+        android:layout_alignBottom="@+id/salidaR"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/reserva"
         style="@style/homeButton"
-        android:onClick="onStartReserva"
-        android:text="Next"
+
+        android:text="Reservar"
+        android:onClick="onClickIngresar"
         android:textColor="#ffffff"
         android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginTop="21dp" />
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/correoR"
+        android:layout_alignEnd="@+id/correoR"
+        android:layout_marginBottom="13dp" />
 
+    <TextView
+        android:text="Personas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/textView6"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/personasR"
+        android:layout_alignBottom="@+id/personasR"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/salidaR"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/llegadaR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/personasR"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/correoR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/llegadaR"
+        android:layout_alignStart="@+id/llegadaR" />
+
+    <EditText
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/correoR"
+        android:textSize="25dp"
+        android:background="#f5cbcb"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/_correo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/atras"
+        style="@style/homeButton"
+        android:onClick="onStartAtras"
+        android:text="Atras"
+        android:textColor="#ffffff"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_alignBaseline="@+id/reserva"
+        android:layout_alignBottom="@+id/reserva"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

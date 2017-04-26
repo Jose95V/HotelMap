@@ -13,10 +13,10 @@
     tools:context="com.example.berenice.proyectohoteles.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-
     <FrameLayout
-        android:orientation="horizontal"
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent">
 
         <ListView
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/lista1"
             android:layout_gravity="center" />
+
     </FrameLayout>
 
 </RelativeLayout>

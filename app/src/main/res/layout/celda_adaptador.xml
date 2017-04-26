@@ -39,18 +39,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/nombre"
-                        android:textSize="18sp"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/holo_blue_dark"
-
-                        />
-
-
 
 
                 </LinearLayout>
