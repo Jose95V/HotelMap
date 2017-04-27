@@ -21,7 +21,7 @@
 
 
     <TextView
-        android:text="Hoteles"
+        android:text="Habitación"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/_nombre"
@@ -33,41 +33,80 @@
         />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/_correo"
+        android:layout_below="@+id/_direccion"
+        android:layout_alignLeft="@+id/_direccion"
+        android:layout_alignStart="@+id/_direccion"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/_direccion"
+        android:layout_below="@+id/_descripcion"
+        android:layout_alignLeft="@+id/_descripcion"
+        android:layout_alignStart="@+id/_descripcion"
+        android:layout_marginTop="34dp" />
+
+    <TextView
         android:text="Descripcion:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/_nombre"
         android:textSize="16sp"
         android:textStyle="normal|bold"
-        android:id="@+id/_descripcion" />
+        android:id="@+id/_descripcion"
+        android:layout_below="@+id/_nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
 
     <TextView
-        android:text="Direccion:"
-        android:layout_width="wrap_content"
+        android:text="Precio"
+        android:layout_width="35pt"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/_descripcion"
+        android:id="@+id/textView4"
+        android:textStyle="normal|bold"
         android:textSize="16sp"
-        android:id="@+id/_direccion" />
+        android:layout_alignBaseline="@+id/_descripcion"
+        android:layout_alignBottom="@+id/_descripcion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Correo"
+        android:text="Personas"
+        android:layout_width="35pt"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/_direccion"
+        android:layout_alignBottom="@+id/_direccion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Descripción"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/_direccion"
+        android:id="@+id/textView8"
+        android:textStyle="normal|bold"
         android:textSize="16sp"
-        android:id="@+id/_correo" />
+        android:layout_alignBaseline="@+id/_correo"
+        android:layout_alignBottom="@+id/_correo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Reservacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/_correo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="31dp"
-        android:id="@+id/_reservacion" />
+        android:onClick="onStartReserva"
+        android:id="@+id/_reservacion"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
