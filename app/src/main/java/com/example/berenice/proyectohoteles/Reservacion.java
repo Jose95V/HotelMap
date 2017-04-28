@@ -26,6 +26,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import android.R;
+import android.R.*;
 
 /**
  * Created by Berenice on 25/04/2017.

@@ -50,8 +50,8 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
         map.getUiSettings().setZoomControlsEnabled(true);
 
         LatLng marker = new LatLng( 14.4504684 , -87.62989800000003);
-        LatLng hotel1 = new LatLng( 14.44363634700978 , -87.63761222362518);
-        LatLng hotel2 = new LatLng( 14.445522075895944 , -87.63803601264954);
+        LatLng hotel1 = new LatLng( 14.4610489 , -87.64246579999997);
+        LatLng catedral = new LatLng( 14.4602045 , -87.64094490000002);
         LatLng hotel3 = new LatLng( 14.446667531505083 , -87.63346284627914);
         LatLng hotel4 = new LatLng( 14.456540023343491 , -87.63174891471863);
         LatLng hotel5 = new LatLng( 14.450176588950702 , -87.64241874217987);
@@ -62,8 +62,8 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
 
 
         googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
-        googleMap.addMarker(new MarkerOptions().title("Santa Maria de Comayagua").position(hotel1).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
-        googleMap.addMarker(new MarkerOptions().title("Hotel Plaza Futura").position(hotel2).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Hotel Antigua Comayagua").position(hotel1).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Catedral inmaculada concepcion").position(catedral).icon(BitmapDescriptorFactory.fromResource(R.drawable.iglesia)));
         googleMap.addMarker(new MarkerOptions().title("Hotel Comayagua Colonial").position(hotel3).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
         googleMap.addMarker(new MarkerOptions().title("Hotel Suarez").position(hotel4).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
         googleMap.addMarker(new MarkerOptions().title("Hotel Posada del Valle").position(hotel5).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
