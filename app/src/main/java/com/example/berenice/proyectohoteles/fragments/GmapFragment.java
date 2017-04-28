@@ -68,16 +68,16 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
 
         googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
         googleMap.addMarker(new MarkerOptions().title("Hotel Antigua Comayagua").position(hotel1).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
-        googleMap.addMarker(new MarkerOptions().title("Catedral inmaculada concepcion").position(catedral).icon(BitmapDescriptorFactory.fromResource(R.drawable.iglesia)));
-        googleMap.addMarker(new MarkerOptions().title("Caxa Real").position(caxa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
-        googleMap.addMarker(new MarkerOptions().title("Villa Mark Park").position(villa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
-        googleMap.addMarker(new MarkerOptions().title("Museo Arqueologico").position(museo).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
-        googleMap.addMarker(new MarkerOptions().title("Plaza la Merced").position(plaza).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
-        googleMap.addMarker(new MarkerOptions().title("Gasolinera Texaco").position(gaso).icon(BitmapDescriptorFactory.fromResource(R.drawable.gaso)));
-        googleMap.addMarker(new MarkerOptions().title("Pizza Hut").position(pizza).icon(BitmapDescriptorFactory.fromResource(R.drawable.dinner)));
-        googleMap.addMarker(new MarkerOptions().title("Burguer King").position(burguer).icon(BitmapDescriptorFactory.fromResource(R.drawable.dinner)));
-        googleMap.addMarker(new MarkerOptions().title("Museo Casa Cabañas").position(museoC).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
-        googleMap.addMarker(new MarkerOptions().title("Supermercados del corral").position(corral).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Catedral inmaculada concepcion").position(catedral).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Caxa Real").position(caxa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Villa Mark Park").position(villa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Museo Arqueologico").position(museo).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Plaza la Merced").position(plaza).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Gasolinera Texaco").position(gaso).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Pizza Hut").position(pizza).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Burguer King").position(burguer).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Museo Casa Cabañas").position(museoC).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
+        googleMap.addMarker(new MarkerOptions().title("Supermercados del corral").position(corral).icon(BitmapDescriptorFactory.fromResource(R.drawable.turis)));
 
     }
 
