@@ -52,10 +52,15 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
         LatLng marker = new LatLng( 14.4504684 , -87.62989800000003);
         LatLng hotel1 = new LatLng( 14.4610489 , -87.64246579999997);
         LatLng catedral = new LatLng( 14.4602045 , -87.64094490000002);
-        LatLng hotel3 = new LatLng( 14.446667531505083 , -87.63346284627914);
-        LatLng hotel4 = new LatLng( 14.456540023343491 , -87.63174891471863);
-        LatLng hotel5 = new LatLng( 14.450176588950702 , -87.64241874217987);
-        LatLng hotel6 = new LatLng( 14.454171288641326 , -87.6426762342453);
+        LatLng caxa = new LatLng( 14.4610287 , -87.64013669999997);
+        LatLng villa = new LatLng( 14.4194658 , -87.61604119999998);
+        LatLng museo = new LatLng( 14.4618588 , -87.6416178);
+        LatLng plaza = new LatLng( 14.4572525 , -87.64011440000002);
+        LatLng gaso = new LatLng( 14.4498032 , -87.64297440000001);
+        LatLng pizza = new LatLng( 14.4460238 , -87.63899529999998);
+        LatLng burguer = new LatLng( 14.4453436 , -87.63758469999999);
+        LatLng museoC = new LatLng( 14.45944896124414 ,-87.64010667800903);
+        LatLng corral = new LatLng( 14.4521101 ,-87.63953620000001);
 
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 18));
@@ -64,10 +69,16 @@ public class GmapFragment extends Fragment implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().title("Google Maps!").position(marker));
         googleMap.addMarker(new MarkerOptions().title("Hotel Antigua Comayagua").position(hotel1).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
         googleMap.addMarker(new MarkerOptions().title("Catedral inmaculada concepcion").position(catedral).icon(BitmapDescriptorFactory.fromResource(R.drawable.iglesia)));
-        googleMap.addMarker(new MarkerOptions().title("Hotel Comayagua Colonial").position(hotel3).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
-        googleMap.addMarker(new MarkerOptions().title("Hotel Suarez").position(hotel4).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
-        googleMap.addMarker(new MarkerOptions().title("Hotel Posada del Valle").position(hotel5).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
-        googleMap.addMarker(new MarkerOptions().title("Hotel Santa Teresa").position(hotel6).icon(BitmapDescriptorFactory.fromResource(R.drawable.maphotel)));
+        googleMap.addMarker(new MarkerOptions().title("Caxa Real").position(caxa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Villa Mark Park").position(villa).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Museo Arqueologico").position(museo).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Plaza la Merced").position(plaza).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Gasolinera Texaco").position(gaso).icon(BitmapDescriptorFactory.fromResource(R.drawable.gaso)));
+        googleMap.addMarker(new MarkerOptions().title("Pizza Hut").position(pizza).icon(BitmapDescriptorFactory.fromResource(R.drawable.dinner)));
+        googleMap.addMarker(new MarkerOptions().title("Burguer King").position(burguer).icon(BitmapDescriptorFactory.fromResource(R.drawable.dinner)));
+        googleMap.addMarker(new MarkerOptions().title("Museo Casa Cabañas").position(museoC).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+        googleMap.addMarker(new MarkerOptions().title("Supermercados del corral").position(corral).icon(BitmapDescriptorFactory.fromResource(R.drawable.turista)));
+
     }
 
 }
