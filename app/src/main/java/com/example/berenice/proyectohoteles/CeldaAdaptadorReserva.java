@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
@@ -38,6 +39,7 @@ public class CeldaAdaptadorReserva extends ArrayAdapter<JSONObject>{
 
 
 
+        TextView nombre=(TextView) celda.findViewById(R.id.tamanio);
        // TextView nombre=(TextView) celda.findViewById(R.id.precio);
       /*  TextView descripcion=(TextView) celda.findViewById(R.id.descripcion);
         TextView genero=(TextView) celda.findViewById(R.id.genero);
@@ -49,6 +51,7 @@ public class CeldaAdaptadorReserva extends ArrayAdapter<JSONObject>{
         try {
 
             String url=elemento.getString("imagen");
+            nombre.setText(elemento.getString("tamanio"));
             //nombre.setText(elemento.getString("descripcion"));
            /* descripcion.setText(elemento.getString("descripcion"));
             genero.setText("Genero: "+elemento.getString("genero"));

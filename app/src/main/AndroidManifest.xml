@@ -21,6 +21,21 @@
 
 
         <activity android:name=".DetalleActivity"></activity>
+        <activity android:name=".Reservacion"></activity>
+        <activity android:name=".Informacion"></activity>
+        <activity android:name=".DetalleInformacion"></activity>
+        <activity android:name=".Desayunos"></activity>
+        <activity android:name=".Restaurante"></activity>
+        <activity android:name=".Comidas"></activity>
+        <activity android:name=".Bebidas"></activity>
+        <activity android:name=".Recreacion"></activity>
+        <activity android:name=".Piscina"></activity>
+        <activity android:name=".Ping"></activity>
+        <activity android:name=".Bar"></activity>
+        <activity android:name=".Jardin"></activity>
+        <activity android:name=".Buscanos"></activity>
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

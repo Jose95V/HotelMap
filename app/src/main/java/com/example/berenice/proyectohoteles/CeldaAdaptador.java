@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
@@ -38,7 +39,6 @@ public class CeldaAdaptador extends ArrayAdapter<JSONObject> {
         //Video video;
 
 
-       // TextView nombre=(TextView) celda.findViewById(R.id.nombre);
       /*  TextView descripcion=(TextView) celda.findViewById(R.id.descripcion);
         TextView genero=(TextView) celda.findViewById(R.id.genero);
         TextView clasificacion=(TextView) celda.findViewById(R.id.clasificasion);
@@ -49,7 +49,7 @@ public class CeldaAdaptador extends ArrayAdapter<JSONObject> {
         try {
 
             String url=elemento.getString("imagen");
-          //  nombre.setText(elemento.getString("descripcion"));
+
            /* descripcion.setText(elemento.getString("descripcion"));
             genero.setText("Genero: "+elemento.getString("genero"));
             clasificacion.setText("Clasificación: "+elemento.getString("clasificacion"));
