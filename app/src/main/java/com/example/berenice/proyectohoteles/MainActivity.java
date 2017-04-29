@@ -2,6 +2,7 @@ package com.example.berenice.proyectohoteles;
 
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -117,10 +118,18 @@ public class MainActivity extends AppCompatActivity
             getHabitaciones(url);
             setTitle("Reservaciones");
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+            setTitle("Restaurante");
+            Intent i = new Intent(this, Restaurante.class);
+            startActivity(i);
+        } else if (id == R.id.nav_recreacion) {
+            setTitle("Recreación");
+            Intent i = new Intent(this, Recreacion.class);
+            startActivity(i);
+        }
+        else if (id == R.id.nav_buscanos) {
+            setTitle("Buscanos");
+            Intent i = new Intent(this, Buscanos.class);
+            startActivity(i);
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

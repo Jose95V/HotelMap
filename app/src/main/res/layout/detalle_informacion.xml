@@ -14,7 +14,7 @@
 
     <com.android.volley.toolbox.NetworkImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:id="@+id/imagenDetalleI" />
 
 
@@ -35,43 +35,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:id="@+id/_direccionI"
-        android:layout_below="@+id/_nombreI"
+        android:id="@+id/_correoI"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="80dp" />
-
-    <TextView
-        android:text="Descripcion:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="normal|bold"
-        android:id="@+id/_descripcionI"
-        android:layout_alignBottom="@+id/_direccionI"
-        android:layout_marginBottom="37dp" />
+        android:layout_marginBottom="12dp" />
 
     <TextView
         android:text="Correo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:id="@+id/_correoI"
-        android:layout_below="@+id/_direccionI"
+        android:id="@+id/_direccionI"
+        android:layout_above="@+id/_correoI"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
+        android:layout_marginBottom="34dp" />
 
-    <Button
-        android:text="Atras"
+    <TextView
+        android:text="Descripcion:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onStartReserva"
-        android:id="@+id/_atras"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/_descripcionI"
-        android:layout_toEndOf="@+id/_descripcionI"
-        android:layout_marginLeft="58dp"
-        android:layout_marginStart="58dp" />
+        android:textSize="16sp"
+        android:id="@+id/_descripcionI"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
